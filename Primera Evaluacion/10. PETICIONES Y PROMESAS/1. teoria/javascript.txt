@@ -1,0 +1,78 @@
+{
+	"fetch get": {
+		"scope": "javascript",
+		"prefix":"fetchg",
+		"body": [
+			"fetch(url)",
+			"\t.then(datatype=>datatype.json())",
+			"\t.then(response => {",
+			"\t\t console.log(response);\n",
+			"\t });"
+		],
+		"description": "Crea un fetch para peticiones GET"
+	}
+	
+	"fetch post": {
+		"scope": "javascript",
+		"prefix":"fetchp",
+		"body": [
+			"fetch(url, {",
+			"\tmethod:'POST',",
+			"\tbody: datosJSON,",
+			"\theaders: {",
+			"\t\t'Content-Type':'application/json'",
+			"\t},\n})",
+			"\t.then(datatype=>datatype.json())",
+			"\t.then(response => {",
+			"\t\t console.log(response);\n",
+			"\t });"
+		],
+		"description": "Crea un fetch para peticiones POST"
+	}
+	
+	"fetch get async": {
+		"scope": "javascript",
+		"prefix":"asyncg",
+		"body": [
+			"async function peticion() {",
+			"\tconst datatype= await fetch(url);",
+			"\tconst response= await datatype.json()",
+			"\t console.log(response);\n",
+			"}",
+			"\npeticion();"
+	],
+		"description": "Crea un fetch para peticiones async"
+	}
+	
+	
+	"fetch post async": {
+		"scope": "javascript",
+		"prefix":"asyncp",
+		"body": [
+			"async function peticion() {",
+			"\tconst datatype= await fetch(url, {",
+			"\tmethod:'POST',",
+			"\tbody: datosJSON,",
+			"\theaders: {",
+			"\t\t'Content-Type':'application/json'",
+			"\t}\n\t});",
+			"\tconst response= await datatype.json()",
+			"\t console.log(response);\n",
+			"}",
+			"\npeticion();"
+			],
+		"description": "Crea un fetch para peticiones async"
+	}
+	
+	"add event listener post async": {
+		"scope": "javascript",
+		"prefix":"click",
+		"body": [
+			"document.querySelector(\"#boton\").addEventListener(\"click\",function() {",
+			"\t$1",
+			"\n});"
+		],
+		"description": "addEventListener para boton"
+	}
+	
+}
